@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>LyricsSearch</title>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>LyricsSearch</h1>
+
+      <!-- Theme Toggle -->
+      <button id="themeToggle" class="theme-btn">🌙 Dark Mode</button>
+
+      <form id="form">
+        <input
+          type="text"
+          id="search"
+          placeholder="Enter artist or song name..."
+        />
+        <button>Search</button>
+      </form>
+
+      <!-- Recent Searches -->
+      <div id="recent-searches" class="recent-searches"></div>
+    </header>
+
+    <div id="result" class="container">
+      <p>Results will be displayed here</p>
+    </div>
+
+    <div id="more" class="container centered"></div>
+  </body>
+</html>

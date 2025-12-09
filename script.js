@@ -8,9 +8,9 @@ const themeToggle = document.getElementById("themeToggle");
 
 const apiURL = "https://api.lyrics.ovh";
 
-// =========================
+
 // THEME SWITCHER
-// =========================
+
 let currentTheme = localStorage.getItem("theme") || "light";
 document.documentElement.setAttribute("data-theme", currentTheme);
 themeToggle.textContent = currentTheme === "dark" ? "☀️ Light Mode" : "🌙 Dark Mode";
@@ -23,9 +23,9 @@ themeToggle.addEventListener("click", () => {
   themeToggle.textContent = currentTheme === "dark" ? "☀️ Light Mode" : "🌙 Dark Mode";
 });
 
-// =========================
+
 // RECENT SEARCHES
-// =========================
+
 function loadRecentSearches() {
   const items = JSON.parse(localStorage.getItem("recentSearches")) || [];
   recentBox.innerHTML = "";
@@ -52,9 +52,9 @@ function saveRecentSearch(term) {
 
 loadRecentSearches();
 
-// =========================
+
 // SEARCH SONGS
-// =========================
+
 async function searchSongs(term) {
   saveRecentSearch(term);
 
@@ -64,9 +64,9 @@ async function searchSongs(term) {
   showDataSafe(data);
 }
 
-// =========================
+
 // SHOW SONGS + ALBUM ART
-// =========================
+
 function showDataSafe(lyrics) {
   result.innerHTML = "";
   more.innerHTML = "";
@@ -126,9 +126,9 @@ async function getMoreSongs(url) {
   showDataSafe(data);
 }
 
-// =========================
+
 // GET LYRICS
-// =========================
+
 result.addEventListener("click", (e) => {
   if (e.target.tagName === "BUTTON") {
     const artist = e.target.dataset.artist;
@@ -162,9 +162,9 @@ async function getLyricsSafe(artist, songTitle) {
   result.appendChild(span);
 }
 
-// =========================
+
 // FORM SUBMIT
-// =========================
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
